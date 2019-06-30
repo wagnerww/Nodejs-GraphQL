@@ -16,7 +16,10 @@ module.exports = {
   },
 
   Mutation: {
-    createUser: () => {}
+    createUser: async (_, data) => {
+      const res = await User.insert(data).returning("*");
+      return res[0];
+    }
   },
 
   User: {
