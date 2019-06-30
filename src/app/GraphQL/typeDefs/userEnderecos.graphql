@@ -1,0 +1,12 @@
+type Endereco {
+  id: ID!
+  user_id: Int!
+  endereco: String!
+  numero: String!
+  bairro: String
+  complemento: String
+}
+
+type Query {
+  enderecos: [Endereco!]!
+}
